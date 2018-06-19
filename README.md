@@ -28,8 +28,8 @@ define('PAYMENT_URL', 'https://testsecureacceptance.cybersource.com/pay');
 ## Test
 
 ```
-cd /path/to/folder/php
-php -t . -S 0.0.0.0:8088
+$ cd /path/to/cybersource-sa-php
+$ php -t . -S 0.0.0.0:8088
 ```
 
 ### Open URL on Web Browser
