@@ -22,6 +22,14 @@ define('PAYMENT_URL', 'https://testsecureacceptance.cybersource.com/pay');
 // LIVE PAYMENT URL
 // define('PAYMENT_URL', 'https://testsecureacceptance.cybersource.com/pay');
 
+/// INQUIRY TRANSACTION STATUS ///
+$rpt_username = 'itcybs';
+$rpt_password = 'Password101';
+
+// proxy
+$proxy        = '127.0.0.1:3128';
+
+
 // EOF
 ```
 
