@@ -34,6 +34,7 @@ $response_page = $_SERVER['HTTP_REFERER'] . 'response.php';
         <div id="paymentDetailsSection" class="section">
 
             <span>transaction_type:</span>            <input type="text" name="transaction_type" value="sale"><br/>
+            <span>create_token:</span>                <input type="checkbox" id="create_token" onclick="createToken(this)"><br/>
             <span>reference_number:</span>            <input type="text" name="reference_number"><br/>
             <span><b>auth_trans_ref_no</b>:</span>    <input type="text" name="auth_trans_ref_no"><br/>
             <span>amount:</span>                      <input type="text" name="amount"><br/>
@@ -91,9 +92,21 @@ $response_page = $_SERVER['HTTP_REFERER'] . 'response.php';
 
     <input type="submit" id="btn_submit" value="Submit"/>
 
-    <script type="text/javascript" src="../js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="../js/payment_form.js"></script>
+    <script type="text/javascript">
+        
+        function createToken(create_token) {
 
+            var type = 'sale';
+
+            if (create_token.checked) {
+                type += ',create_payment_token';
+            }
+
+            $("input[name='transaction_type']").val(type);
+        }
+    </script>
 </form>
 
 <!-- DF START -->

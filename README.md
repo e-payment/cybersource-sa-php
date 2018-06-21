@@ -40,3 +40,14 @@ http://localhost:8088/payment/
 
 - [Secure Acceptance Web/Mobile Quick Start Guide (PDF)](https://github.com/e-payment/cybersource-secure-acceptance/blob/master/doc/Secure_Acceptance_WM_Quick_Start_Guide.pdf)
 - [Secure Acceptance Web/Mobile Reference Document (PDF)](https://github.com/e-payment/cybersource-secure-acceptance/blob/master/doc/Secure_Acceptance_WM.pdf)
+
+### White-list IP address
+
+All Secure Acceptance notification messaging will originate from a different range of servers and IP addresses. If you are using any Secure Acceptance services, you must add the following IP address ranges to any whitelist or filtering logic.
+
+```
+198.241.162.1 - 198.241.162.254
+198.241.168.1 - 198.241.168.254
+```
+
+- [White-list IP to receive replies and posts from CyberSource](https://support.cybersource.com/s/article/What-IP-addresses-should-I-add-to-my-white-list-to-receive-replies-and-posts-from-CyberSource)
