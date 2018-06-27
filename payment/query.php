@@ -2,8 +2,11 @@
 
 require realpath(dirname( __FILE__ ) . '/config.php');
 
-define ('QUERY_URL_TEST', 'https://ebctest.cybersource.com/ebctest/Query');
-define ('QUERY_URL_LIVE', 'https://ebc.cybersource.com/ebc/Query');
+// TEST
+define ('QUERY_URL', 'https://ebctest.cybersource.com/ebctest/Query');
+
+// LIVE
+// define ('QUERY_URL', 'https://ebc.cybersource.com/ebc/Query');
 
 ob_start();
 
@@ -24,14 +27,13 @@ $authz = base64_encode($authz);
 //echo $authz . PHP_EOL;
 
 $conn = curl_init();
-curl_setopt($conn, CURLOPT_URL, QUERY_URL_TEST);
+curl_setopt($conn, CURLOPT_URL, QUERY_URL);
 curl_setopt($conn, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($conn, CURLOPT_SSL_VERIFYPEER, 0);
 
 curl_setopt($conn, CURLOPT_POST, 1);
 $post_fields  = 'merchantID=' . MERCHANT_ID;
 $post_fields .= '&type=transaction';
-$post_fields .= '&subtype=transactionDetail';
 $post_fields .= '&subtype=transactionDetail';
 $post_fields .= '&versionNumber=1.7';
 

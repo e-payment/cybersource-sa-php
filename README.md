@@ -20,9 +20,9 @@ define('DF_ORG_ID', '1snn5n9w');
 define('PAYMENT_URL', 'https://testsecureacceptance.cybersource.com/pay');
 
 // LIVE PAYMENT URL
-// define('PAYMENT_URL', 'https://testsecureacceptance.cybersource.com/pay');
+// define('PAYMENT_URL', 'https://secureacceptance.cybersource.com/pay');
 
-/// INQUIRY TRANSACTION STATUS ///
+// INQUIRY TRANSACTION
 $rpt_username = '<RPT_USERNAME>';
 $rpt_password = '<RPT_PASSWORD>';
 
